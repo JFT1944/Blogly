@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+{% for i in range(3)%}
+<h1>{{top[i]}}</h1><input type="text" placeholder="change to:" name="{{i}}">
+{% endfor %}
+<input type="submit">
+</form>
+{% endblock %}

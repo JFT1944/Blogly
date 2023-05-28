@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% for user in total %}
+<li><a href="/users/{{user[3]}}"><b style="font-size:25px">{{user[0]}} {{user[1]}} </b>{{user[2]}}</a></li>
+{% endfor %}
+<div style="height:25px;"></div>
+<div style="display: flex; flex-direction:column">
+<a href="/users/new">Add a new user</a>
+
+
+
+<a style="width: 50%;" href="/tags">Check out these tags</a>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>{{singlepost.title}}</h3>
+<p>{{singlepost.content}}</p>
+<div style="display: flex; flex-wrap: wrap; width: 33%">
+{% for tag in tags%}
+<div style="background: rgb(56, 66, 105);width :auto;height:21px;color:beige; margin: 7px; border-radius: 7px; padding: 7px;">{{tag.title}}</div>
+{% endfor %}
+</div>
+<a href="/posts/{{singlepost.id}}/edit">Edit</a><a style='margin-left: 20px;' href="/posts/{{singlepost.id}}/delete">Delete</a>
+{% endblock %}

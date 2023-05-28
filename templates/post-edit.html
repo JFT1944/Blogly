@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit Post Page</h1>
+
+<!-- <h3>{{singlepost.title}}</h3>
+<p>{{singlepost.content}}</p> -->
+<!-- <a href="/posts/{{singlepost.id}}/edit">Edit</a><a style='margin-left: 20px;' href="/posts/{{singlepost.id}}/delete">Delete</a> -->
+<form action="" method="post">
+    <h3>{{singlepost.title}}</h3><input type="text" name="title" placeholder="New Title">
+    <h4>{{singlepost.content}}</h4><input type="text" name="content" placeholder="New Content">
+    <input type="submit">
+</form>
+
+
+{% endblock %}

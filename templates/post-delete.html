@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Are you sure you want to delete?</h1>
+<form action="" method="post">
+    <input type="radio" id="yes" name="deleting" value="yes">
+    <label for="yes">Yes</label><br>
+    <input type="radio" id="no" name="deleting" value="no">
+    <label for="no">No</label><br>
+    <input type="submit">
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{userpage.first_name}} {{userpage.last_name}} <a style="font-size:15px" href="/users/{{userpage.id}}/edit">edit</a></h1>
+<img src="{{userpage.image_url}}" alt="">
+<h2>{{userpage.image_url}}</h2>
+<img src="https://i.imgur.com/qoMhr0U.jpg" alt="">
+<h2>Posts:</h2>
+<ol>
+{% for post in userposts %}
+
+    <li><div style="display:flex; flex-direction: column; margin-bottom: 15px">
+        <b><span style="font-size: 20px"><a href="/posts/{{post.id}}">{{post.title}}</a></span></b> 
+     
+        <span style="font-size: 13px">{{post.content}}</span>
+    </div></li>
+
+{% endfor %}
+</ol>
+<a href="/users/{{id}}/posts/new">New Post</a>
+<!-- <h1>{{userpage[0]}} {{userpage[1]}}</h1> -->
+{% endblock %}

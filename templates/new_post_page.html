@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+    <input type="text" placeholder="Title" name="title">
+    <input type="text" placeholder="Content" name="content">
+    <input type="submit" name="" id=""><br><br><br>
+
+<h4>Tags:</h4>
+
+{% for tag in tags%}
+<input type="checkbox" id="{{tag.title}}" name="sillyTags{{tag.id}}" value="{{tag.title}}">
+<label for="{{tag.title}}"> {{tag.title}}</label>
+
+{% endfor %}
+</form>
+{% endblock %}
